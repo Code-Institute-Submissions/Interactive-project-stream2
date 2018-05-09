@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="hateCrimes.js"></script>
+    <!--<link rel="stylesheet" href="css/style.css" type="text/css" />-->
     <title>Document</title>
 </head>
+
 <body>
     
+    
+    <form id="crimeForm">
+        <input type="text" name="year" id="year_input"></input>
+        <input type="text" name="ethnicity" id="ethinicity_input"></input>
+    </form>
+    <button onclick="returnCount()">Submit</button>
+        
+    <h1>Hate Crimes</h1>
+    <div class="background-image"></div>
+
+    <div class="maincontent">
+        <p>Offenders</p>
+        <div id="ethnicity"></div>
+        <div id="year"></div>
+        <div id="count"></div>
+        <p>Victims</p>
+        <div id="ethnicityv"></div>
+        <div id="yearv"></div>
+        <div id="countv"></div>
+    </div>
+    
+    
+    
+
+    <!--        <div class="form-group">-->
+    <!--            <label for="exampleFormControlSelect1">Select ethnicity:</label>-->
+    <!--            <select class="form-control" id="exampleFormControlSelect1">-->
+    <!--  <option>1</option>-->
+    <!--  <option>2</option>-->
+    <!--  <option>3</option>-->
+    <!--  <option>4</option>-->
+    <!--  <option>5</option>-->
+    <!--</select>-->
+    <!--        </div>-->
+
+    <!--        <div class="form-group">-->
+    <!--            <label for="exampleFormControlSelect1">Select year:</label>-->
+    <!--            <select class="form-control" id="exampleFormControlSelect1">-->
+    <!--  <option>1</option>-->
+    <!--  <option>2</option>-->
+    <!--  <option>3</option>-->
+    <!--  <option>4</option>-->
+    <!--  <option>5</option>-->
+    <!--</select>-->
+    <!--        </div>-->
+
+    <!--    <button id="submit" onclick="submitEthnicity() submitYear() submitEthnicityv() submitYearV()">Check</button>-->
+    <!--    <div id="data"></div>-->
+    <!--</form>-->
+
+
+    
 </body>
+
 </html>

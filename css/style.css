@@ -1,0 +1,54 @@
+/*.background-image {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/204/133/large_2x/blood-splattered-crime-scene-background-vector.jpg");
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}*/
+
+h1{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    color: black;
+    text-align: center;
+    
+    
+}
+.maincontent {
+    text-align: left;
+    /*position: fixed;*/
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: white;
+    opacity: 0.5;
+  
+    padding: 5px;
+}
+
+/*#crimeForm {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-top: 450px;
+    background-color: white;
+    opacity: 0.5;
+}*/
+
+@maincontent(min-max: )
