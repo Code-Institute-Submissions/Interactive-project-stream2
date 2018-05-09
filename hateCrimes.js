@@ -31,22 +31,37 @@ function displayVictimsNicely(apiData) {
 
             
 function returnCount() {
+    document.getElementById("search_results").textContent = "";
+    document.getElementById("total_count").textContent = "";
+    
     let newData = JSON.parse(dataResponseObj.textForResponse);
     
     let yearInput = document.getElementById("crimeForm")['year'].value
     let ethnicityInput = document.getElementById("crimeForm")['ethnicity'].value
+    let totalNumberOffenders = 0;
     
     for (let i = 0; i <= newData.results.length -1;i++) {
         let yearResults = newData.results[i].year;
         let ethnicityResults = newData.results[i].ethnicity
         
+        
         if(yearInput === yearResults && ethnicityInput == ethnicityResults) {
-            document.getElementById("year").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            
+            
+            
+            document.getElementById("total_count").innerHTML = newData.results[i].count
             
         }else if (yearInput == yearResults) {
-            document.getElementById("year").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            totalNumberOffenders += newData.results[i].count
+            console.log(totalNumberOffenders)
+            document.getElementById("total_count").innerHTML = totalNumberOffenders
+            
         }else if (ethnicityInput == ethnicityResults) {
-            document.getElementById("year").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            totalNumberOffenders += newData.results[i].count
+            document.getElementById("total_count").innerHTML = totalNumberOffenders
         }
         }
     // document.getElementById("year").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Count: </strong>" + newData.results[i].count + "<br>"+ "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
