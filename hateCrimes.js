@@ -46,22 +46,19 @@ debugger;
         let ethnicityResults = newData.results[i].ethnicity
 
 
-        if (yearInput === yearResults && ethnicityInput == ethnicityResults) {
+        if (yearInput == yearResults && ethnicityInput == ethnicityResults) {
             document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
-
-
-
-            document.getElementById("total_count").innerHTML = newData.results[i].count
-
-        }
-        else if (yearInput == yearResults) {
-            document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
-            totalNumberOffenders += newData.results[i].count
-            console.log(totalNumberOffenders)
+                totalNumberOffenders += newData.results[i].count
             document.getElementById("total_count").innerHTML = totalNumberOffenders
 
         }
-        else if (ethnicityInput == ethnicityResults) {
+        else if (yearInput == yearResults && ethnicityInput == "" ) {
+            document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            totalNumberOffenders += newData.results[i].count
+            document.getElementById("total_count").innerHTML = totalNumberOffenders
+
+        }
+        else if (ethnicityInput == ethnicityResults && yearInput == ""){
             document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
             totalNumberOffenders += newData.results[i].count
             document.getElementById("total_count").innerHTML = totalNumberOffenders
@@ -86,22 +83,19 @@ debugger;
         let ethnicityResults = newData.results[i].ethnicity
 
 
-        if (yearInput === yearResults && ethnicityInput == ethnicityResults) {
-            document.getElementById("search_resultsv").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
-
-
-
-            document.getElementById("total_countv").innerHTML = newData.results[i].count
-
-        }
-        else if (yearInput == yearResults) {
+        if (yearInput == yearResults && ethnicityInput == ethnicityResults) {
             document.getElementById("search_resultsv").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
             totalNumberVictims += newData.results[i].count
-            console.log(totalNumberVictims)
             document.getElementById("total_countv").innerHTML = totalNumberVictims
 
         }
-        else if (ethnicityInput == ethnicityResults) {
+        else if (yearInput == yearResults && ethnicityInput == "") {
+            document.getElementById("search_resultsv").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
+            totalNumberVictims += newData.results[i].count
+            document.getElementById("total_countv").innerHTML = totalNumberVictims
+
+        }
+        else if (ethnicityInput == ethnicityResults && yearInput == "") {
             document.getElementById("search_resultsv").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
             totalNumberVictims += newData.results[i].count
             document.getElementById("total_countv").innerHTML = totalNumberVictims
@@ -124,7 +118,7 @@ haterequest.onreadystatechange = function() {
 
 victimrequest.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        displayVictimsNicely(this.responseText)
+        displayHateNicely(this.responseText)
     }
     dataResponseVictimObj.textForResponse = this.responseText
 }
