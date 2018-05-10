@@ -5,63 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="hateCrimes.js"></script>
-    <!--<link rel="stylesheet" href="css/style.css" type="text/css" />-->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script type="text/javascript" src="fbiApi.js"></script>
     <title>Document</title>
 </head>
 
-<body>
+<body class="background-image">
     
     
     <form id="crimeForm">
-        <input type="text" name="year" id="year_input"></input>
-        <input type="text" name="ethnicity" id="ethinicity_input"></input>
+        <strong>Year (1991-2016):</strong>
+        <input type="number" name="year" id="year_input" min="1991" max="2016"></input><br>
+        <strong>Choose ethnicity:</strong><br>
+        <input type="radio" name="ethnicity" id="ethinicity_input" value="Not Hispanic or Latino">Not Hispanic or Latino</input><br>
+        <input type="radio" name="ethnicity" id="ethinicity_input" value="Hispanic or Latino">Hispanic or Latino</input><br>
+        <input type="radio" name="ethnicity" id="ethinicity_input" value="Unknown">Uknown</input><br>
+        <input type="radio" name="ethnicity" id="ethinicity_input" value="Multiple">Multiple</input>
     </form>
-    <button onclick="returnCountOff(); returnCountVic();">Submit</button>
+    <button onclick="startParty();">Submit</button>
         
-    <h1>Hate Crimes</h1>
     <div class="background-image"></div>
-
     <div class="maincontent">
+        
         <p>Offenders:</p>
         <div id="search_results"></div>
+        Total Crimes:
         <div id="total_count"></div>
         <p>Victims:</p>
         <div id="search_resultsv"></div>
+        Total Crimes:
         <div id="total_countv"></div>
+    
+    <div id="pie-chart-count"></div>
+    
+    
     </div>
     
-    
-    
 
-    <!--        <div class="form-group">-->
-    <!--            <label for="exampleFormControlSelect1">Select ethnicity:</label>-->
-    <!--            <select class="form-control" id="exampleFormControlSelect1">-->
-    <!--  <option>1</option>-->
-    <!--  <option>2</option>-->
-    <!--  <option>3</option>-->
-    <!--  <option>4</option>-->
-    <!--  <option>5</option>-->
-    <!--</select>-->
-    <!--        </div>-->
-
-    <!--        <div class="form-group">-->
-    <!--            <label for="exampleFormControlSelect1">Select year:</label>-->
-    <!--            <select class="form-control" id="exampleFormControlSelect1">-->
-    <!--  <option>1</option>-->
-    <!--  <option>2</option>-->
-    <!--  <option>3</option>-->
-    <!--  <option>4</option>-->
-    <!--  <option>5</option>-->
-    <!--</select>-->
-    <!--        </div>-->
-
-    <!--    <button id="submit" onclick="submitEthnicity() submitYear() submitEthnicityv() submitYearV()">Check</button>-->
-    <!--    <div id="data"></div>-->
-    <!--</form>-->
-
-
-    
 </body>
 
 </html>
