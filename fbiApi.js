@@ -50,68 +50,12 @@ function mainFunc(resultsId, totalsId, dataObject) {
 
     return counter;
 }
-/*
-function returnCountOff() {
 
-    document.getElementById("search_results").textContent = "";
-    document.getElementById("total_count").textContent = "";
-    let newData = JSON.parse(dataResponseOffenderObj.textForResponse);
-
-    let yearInput = document.getElementById("crimeForm")['year'].value
-    let ethnicityInput = document.getElementById("crimeForm")['ethnicity'].value
-    let totalNumberOffenders = 0;
-
-    for (let i = 0; i <= newData.results.length - 1; i++) {
-        let yearResults = newData.results[i].year;
-        let ethnicityResults = newData.results[i].ethnicity
-
-        if ((yearInput == yearResults && ethnicityInput == ethnicityResults) ||
-            (yearInput == yearResults && ethnicityInput == "") ||
-            (ethnicityInput == ethnicityResults && yearInput == "")
-        ) {
-            document.getElementById("search_results").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
-            totalNumberOffenders += newData.results[i].count
-            document.getElementById("total_count").innerHTML = totalNumberOffenders
-        }
-    }
-
-
-
-    return totalNumberOffenders;
-}
-
-function returnCountVic() {
-    document.getElementById("search_resultsv").textContent = "";
-    document.getElementById("total_countv").textContent = "";
-
-    let newData = JSON.parse(dataResponseVictimObj.textForResponse);
-
-    let yearInput = document.getElementById("crimeForm")['year'].value
-    let ethnicityInput = document.getElementById("crimeForm")['ethnicity'].value
-    let totalNumberVictims = 0;
-
-    for (let i = 0; i <= newData.results.length - 1; i++) {
-        let yearResults = newData.results[i].year;
-        let ethnicityResults = newData.results[i].ethnicity
-
-        if ((yearInput == yearResults && ethnicityInput == ethnicityResults) ||
-            (yearInput == yearResults && ethnicityInput == "") ||
-            (ethnicityInput == ethnicityResults && yearInput == "")) 
-        {
-            document.getElementById("search_resultsv").innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
-            totalNumberVictims += newData.results[i].count
-            document.getElementById("total_countv").innerHTML = totalNumberVictims
-
-        }
-    }
-
-    return totalNumberVictims;
-}*/
 
 
 function startParty() {
-    var offenders = mainFunc("search_results", "total_count", dataResponseOffenderObj);
-    var victims = mainFunc("search_resultsv", "total_countv", dataResponseVictimObj);
+    var offenders = mainFunc("resultsOffenders", "totalCountOffenders", dataResponseOffenderObj);
+    var victims = mainFunc("resultsVictims", "totalCountVictims", dataResponseVictimObj);
   
     var formatObj = [
         { name: 'Offenders', count: offenders },
