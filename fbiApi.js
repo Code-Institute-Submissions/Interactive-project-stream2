@@ -3,9 +3,9 @@ let dataResponseVictimObj = {}
 let haterequest = new XMLHttpRequest();
 let victimrequest = new XMLHttpRequest();
 
-function makeGraph(thingData) {
+function makeGraph(countChartData) {
 
-    let ndx = crossfilter(thingData);
+    let ndx = crossfilter(countChartData);
 
     let nameDim = ndx.dimension(dc.pluck('name'));
     let totalCount = nameDim.group().reduceSum(dc.pluck("count"));
@@ -13,11 +13,11 @@ function makeGraph(thingData) {
     let countChart = dc.pieChart("#pie-chart-count");
 
     countChart
-        .height(300)
-        .radius(100)
+        .height(400)
+        .radius(150)
         .dimension(nameDim)
         .group(totalCount)
-        .ordinalColors(["pink", "lightgreen", "blue"])
+        .ordinalColors(["white", "red",])
         .render()
 
     dc.renderAll();
