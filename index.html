@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
@@ -13,17 +14,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"></script>
     <script type="text/javascript" src="fbiApi.js"></script>
-    
+
     <title>F.B.I Crime Data Explorer</title>
 </head>
 
-<body>
-    
-    <div class="general"></div>
-    <header></header><br><br>
-    <div class="wholeForm">
-        <h1>F.B.I Crime Data Search</h1></header>
-        <form id="crimeForm">
+<body class="bgimg">
+
+
+    <header>Here header</header><br><br>
+
+    <div class="wholeForm row">
+
+        <h1>F.B.I Crime Data Search</h1>
+
+        <form id="crimeForm" class="">
             <strong>Year (2013-2016):</strong>
             <input type="number" name="year" id="year_input" min="2013" max="2016"></input><br>
             <strong>Choose Ethnicity:</strong><br>
@@ -32,25 +36,28 @@
             <input type="radio" name="ethnicity" id="ethinicity_input" value="Unknown">Uknown</input><br>
             <input type="radio" name="ethnicity" id="ethinicity_input" value="Multiple">Multiple</input>
         </form>
-        <button onclick="startParty();">Submit</button>
 
-        
-        <div class="results">
-            <p>Offenders:</p>
-            <div id="resultsOffenders"></div>
-            <p>Total Crimes:</p>
-            <div id="totalCountOffenders"></div>
-            <p>Victims:</p>
-            <div id="resultsVictims"></div>
-            <p>Total Crimes:</p>
-            <div id="totalCountVictims"></div>
+        <button class="btn btn-default btn-xs" onclick="startParty();">Search</button>
 
-            <div id="pie-chart-count"></div>
-        </div>
+        <div id="pie-chart-count"></div>
     </div>
-    <br><br>
-    <footer>
-       <p>here footer</p> 
+    
+    
+    <div class="results col-md-12">
+        <p style="color: ;">Offenders:</p>
+        <div id="resultsOffenders"></div>
+        <p>Total Crimes:</p>
+        <div id="totalCountOffenders"></div>
+        <p>Victims:</p>
+        <div id="resultsVictims"></div>
+        <p>Total Crimes:</p>
+        <div id="totalCountVictims"></div>
+    </div>
+
+
+    <footer class>
+        <p>here footer</p>
     </footer>
 </body>
+
 </html>

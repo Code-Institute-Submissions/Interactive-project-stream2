@@ -13,8 +13,8 @@ function makeGraph(countChartData) {
     let countChart = dc.pieChart("#pie-chart-count");
 
     countChart
-        .height(400)
-        .radius(150)
+        .height(200)
+        .radius(100)
         .dimension(nameDim)
         .group(totalCount)
         .ordinalColors(["white", "red",])
