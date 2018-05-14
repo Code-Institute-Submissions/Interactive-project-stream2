@@ -1,3 +1,6 @@
+body{
+    font-style: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 .bgimg {
  background-image: url(../img/backpage.jpg) ;
  background-size: cover;
@@ -7,19 +10,60 @@
  z-index: 0000;
 }
 
-.wholeForm{
+.row{
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+@media (max-width:736px){
+   
+    .one, .two, .three {
+        padding-bottom: 20%;
+        padding-left: 0;
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+    .bgimg{
+     background-image: none;
+     background-color: #273A4B;
+    
+ }
+}
+
+.form{
     background-color: lightgrey;
-    position: absolute;
     background: rgb(204, 204, 204); 
     background: rgba(204, 204, 204, 0.5);
-    padding: 20px 20px 20px 40px;
-    margin: 40px 0px 110px 60px;
-    width: 350px;
+    width: 300px;
     color: white;
+    padding-left: 20px;
+    padding-bottom: 10px;
     
 }
 
-h1{
+.pieFontColor{
+    color: black;
+}
+
+@media (min-width:736px) {
+ .results .form {
+      margin-left: 20px
+ }
+ 
+}
+
+.bigScores {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.dc-chart .pie-slice {
+    fill: black;
+}
+
+h2{
     text-align: center;
 }
 
@@ -39,17 +83,18 @@ footer{
     background: rgb(204, 204, 204); 
     background: rgba(204, 204, 204, 0.5);
 }
+
+.display_none {
+    display: none;
+}
+
 .results {
     background-color: lightgrey;
     background: rgb(204, 204, 204); 
     background: rgba(204, 204, 204, 0.5);
     width: 300px;
-    position: absolute;
     color: white;
-    padding: 20px 20px 20px 40px;
-    margin: 40px 40px 110px 960px;
-    
-    
+    padding: 10px 15px 10px 15px;
 }
 
 header{
@@ -60,6 +105,7 @@ header{
     position: relative;
     top:0;
     width:100%;
-    height: 50px;
-    text-align: center;
+    height: 70px;
+    text-align: left;
+   
 }

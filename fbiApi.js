@@ -44,10 +44,9 @@ function mainFunc(resultsId, totalsId, dataObject) {
             document.getElementById(resultsId).innerHTML += "<strong>Year: </strong>" + newData.results[i].year + "<br>" + "<strong>Ethnicity: </strong>" + newData.results[i].ethnicity + "<br>";
             counter += newData.results[i].count
             document.getElementById(totalsId).innerHTML = counter
-
+            
         }
     }
-
     return counter;
 }
 
@@ -61,6 +60,9 @@ function startParty() {
         { name: 'Offenders', count: offenders },
         { name: 'Victims', count: victims }
     ];
+    document.getElementById("resultsid").classList.remove("display_none");
+    $( "#totalCountVictims" ).clone().appendTo( "#underThePieChartVictimsCount" );
+    $( "#totalCountOffenders" ).clone().appendTo( "#underThePieChartOffendersCount" );
 
     makeGraph(formatObj);
 }
