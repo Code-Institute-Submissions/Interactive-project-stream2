@@ -1,5 +1,5 @@
 body{
-    font-style: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Special Elite', cursive;
 }
 .bgimg {
  background-image: url(../img/backpage.jpg) ;
@@ -10,9 +10,17 @@ body{
  z-index: 0000;
 }
 
+#underThePieChartOffendersCount{
+    color: red;
+}
+
+#underThePieChartVictimsCount{
+    color: white;
+}
+
 .row{
     padding-top: 100px;
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 @media (max-width:736px){
@@ -46,8 +54,14 @@ body{
 }
 
 @media (min-width:736px) {
- .results .form {
-      margin-left: 20px
+ .results {
+    margin-left: 20px;
+    overflow-y: scroll !important;
+    max-height: 210px !important;
+ }
+ 
+ .form {
+      margin-left: 20px;
  }
  
 }
