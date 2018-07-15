@@ -88,11 +88,8 @@ victimrequest.onload = function() {
 }
 
 
-
-
-
-
 function startParty(crime, crimeTitle) {
+    $("#searchbtn").css("display", "block");
     $('#titleCrime').html(crimeTitle)
     haterequest.open("GET", "https://fbi-flask-restful-api-mboladop.c9users.io:8080/offenders/" + crime);
 

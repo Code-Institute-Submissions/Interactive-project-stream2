@@ -23,16 +23,18 @@
 
 
     <header><h1>CRIME VS ETHNICITY CHARTING</h1></header><br><br>
- <button class="btn btn-default btn-xs" onclick="startParty('rape', 'Rape');">Rape</button>
- <button class="btn btn-default btn-xs" onclick="startParty('violent-crime', 'Violent crimes');">Violent crimes</button>
- <button class="btn btn-default btn-xs" onclick="startParty('arson','Arson');">Arson</button></button>
- <button class="btn btn-default btn-xs" onclick="startParty('robbery','Robbery');">Robbery</button></button>
- <button class="btn btn-default btn-xs" onclick="startParty('homicide','Homicide');">Homicide</button></button>
- <button class="btn btn-default btn-xs" onclick="startParty('property-crime','Property crimes');">Property crimes</button></button>
- <button class="btn btn-default btn-xs" onclick="startParty('burglary','Burglary');">Burglary</button></button>
- <button class="btn btn-default btn-xs" onclick="startParty('larceny','Larceny');">Larceny</button></button>
- <button class="btn btn-default btn-xs" onclick="startParty('aggravated-assault','Aggravated assaults');">Aggravated assaults</button></button>
     <div class="container">
+        <div class="row crimetype">
+            <button class="btn btn-default btn-xs" onclick="startParty('rape', 'Rape');">Rape</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('violent-crime', 'Violent crimes');">Violent crimes</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('arson','Arson');">Arson</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('robbery','Robbery');">Robbery</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('homicide','Homicide');">Homicide</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('property-crime','Property crimes');">Property crimes</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('burglary','Burglary');">Burglary</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('larceny','Larceny');">Larceny</button>
+            <button class="btn btn-default btn-xs" onclick="startParty('aggravated-assault','Aggravated assaults');">Aggravated assaults</button>
+        </div>
         <div class="row">
             <div class="col-sm-4 form one">
                 <h2>F.B.I <span id="titleCrime"></span> Data Search</h2>
@@ -43,16 +45,23 @@
                     <div id='crimediv'>
                     </div>
                 </form>
-                <button class="btn btn-default btn-xs" onclick="afterhours();">Search</button>
+                <button id='searchbtn' class=" btn btn-default btn-xs" onclick="afterhours();">Search</button>
             </div>
+            <div class="col-sm-8">
+            <div class="compositeChart">
+                <h1>composite</h1>
+            </div>
+            </div>   
+        </div>   
+        <div class="row">
             <div class="col-sm-4 two">
                     <div id="pie-chart-count"></div>
             </div>
-            <div class="col-sm-4 three bigScores">    
+            <div class="col-sm-4 bigScores">    
                 <div id="underThePieChartOffendersCount"></div>
                 <div id="underThePieChartVictimsCount"></div>
             </div>
-            <div class="col-sm-4 four">
+            <div class="col-sm-4">
                 <div id="resultsid" class="results display_none">
                     <p>Offenders:</p>
                     <div id="resultsOffenders"></div>
@@ -67,12 +76,6 @@
         </div>
     </div>
 
-
-
-
-    <footer class>
-        <p>here footer</p>
-    </footer>
 </body>
 
 </html>

@@ -10,6 +10,9 @@ body{
  z-index: 0000;
 }
 
+#searchbtn{
+    display: none;
+}
 #underThePieChartOffendersCount{
     color: red;
 }
@@ -17,25 +20,20 @@ body{
 #underThePieChartVictimsCount{
     color: white;
 }
-
+.crimetype{
+    text-align: center;
+}
 .row{
     padding-top: 100px;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 @media (max-width:736px){
-   
-    .one, .two, .three {
-        padding-bottom: 20%;
-        padding-left: 0;
-        padding-top: 20px;
-        padding-right: 15px;
-    }
-    .bgimg{
+.bgimg{
      background-image: none;
      background-color: #273A4B;
-    
  }
+ 
 }
 
 .form{
