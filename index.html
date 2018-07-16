@@ -39,18 +39,16 @@
             <div class="col-sm-4 form one">
                 <h2>F.B.I <span id="titleCrime"></span> Data Search</h2>
                 <form id="crimeForm" class="">
-                    <strong>Year (2013-2016):</strong>
-                    <input style="color: black;" type="number" name="year" id="year_input" min="2013" max="2016"></input><br>
+                    <strong>Year (1991-2016):</strong>
+                    <input style="color: black;" type="number" name="year" id="year_input" min="1991" max="2016"></input><br>
                     <strong>Choose Ethnicity:</strong><br>
                     <div id='crimediv'>
                     </div>
                 </form>
                 <button id='searchbtn' class=" btn btn-default btn-xs" onclick="afterhours();">Search</button>
             </div>
-            <div class="col-sm-8">
-            <div class="compositeChart">
-                <h1>composite</h1>
-            </div>
+            <div id="containerComposite" class="col-sm-8">
+            <div id="composite-chart"></div>
             </div>   
         </div>   
         <div class="row">

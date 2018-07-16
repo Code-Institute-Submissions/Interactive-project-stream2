@@ -36,6 +36,15 @@ body{
  
 }
 
+#composite-chart{
+    background-color: lightgrey;
+    background: rgb(204, 204, 204); 
+    background: rgba(204, 204, 204, 0.5);
+    padding: 20px;
+    
+    
+    
+}
 .form{
     background-color: lightgrey;
     background: rgb(204, 204, 204); 
