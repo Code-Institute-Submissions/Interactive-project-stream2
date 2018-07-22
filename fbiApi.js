@@ -149,7 +149,7 @@ function afterhours() {
       //  { name: 'Offenders', value: offenders, year:offenders },
         
        
-    
+    document.getElementById("containerComposite").classList.remove("display_none");
     document.getElementById("resultsid").classList.remove("display_none");
     document.getElementById("underThePieChartOffendersCount").innerHTML = "<p>"+offenders+"</p>";
     document.getElementById("underThePieChartVictimsCount").innerHTML = victims;
@@ -182,9 +182,9 @@ victimrequest.onload = function() {
 function startParty(crime, crimeTitle) {
     $("#searchbtn").css("display", "block");
     $('#titleCrime').html(crimeTitle)
-    haterequest.open("GET", "https://fbi-flask-restful-api-mboladop.c9users.io:8080/offenders/" + crime);
+    haterequest.open("GET", "https://fbi-restful-api-mboladop.c9users.io:8080/offenders/" + crime);
 
-    victimrequest.open("GET", "https://fbi-flask-restful-api-mboladop.c9users.io:8080/victims/"+ crime);
+    victimrequest.open("GET", "https://fbi-restful-api-mboladop.c9users.io:8080/victims/"+ crime);
 
     haterequest.send();
     victimrequest.send();

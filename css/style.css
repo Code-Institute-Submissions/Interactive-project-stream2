@@ -1,8 +1,8 @@
 body{
-    font-family: 'Special Elite', cursive;
+    font-family: monospace !important;
 }
 .bgimg {
- background-image: url(../img/backpage.jpg) ;
+ background-color: #273A4B;
  background-size: cover;
  background-attachment: fixed;
  width: 100%;
@@ -60,16 +60,22 @@ body{
     color: black;
 }
 
+#containerComposite{
+    padding-left: 20px;
+    padding-top: 0px;
+}
+
 @media (min-width:736px) {
  .results {
     margin-left: 20px;
     overflow-y: scroll !important;
     max-height: 210px !important;
+    
  }
  
  .form {
       margin-left: 20px;
- }
+ } 
  
 }
 
@@ -116,7 +122,19 @@ footer{
     width: 300px;
     color: white;
     padding: 10px 15px 10px 15px;
+    overflow-y: scroll !important;
+    max-height: 210px !important;
+    
 }
+
+#containerComposite{
+    overflow-x: scroll !important;
+    max-width: 300px !important;
+    padding-left: 0px;
+    padding-top: 20px;
+}
+
+
 
 header{
     background-color: lightgrey;
