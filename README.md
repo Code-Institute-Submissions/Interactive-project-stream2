@@ -9,7 +9,7 @@ FBI API and data manipulation Project with RESTful/wrapper APIs. Used with the F
 ### What is this website for?
  
 This is a website for anyone interested in searching Data comparisons between different ethnicities, types of crimes and the real amount of victims/offenders in each one.
-It specifically design to access real time Data provided by the public FBI API. Extremely useful for lawyers, political campaign uses, non-profits, NGO´s, civil right advocates and special interest groups.
+It specifically designed to access real time Data provided by the public FBI API. Extremely useful for lawyers, political campaign uses, non-profits, NGO´s, civil right advocates and special interest groups.
  
 ### What does it do?
  
@@ -17,7 +17,7 @@ This website has two main searching parameters, first being the type of felony/c
 
 ### How does it work
  
-This website uses **Java-Script** and **jQuery** to route viewers through the site. The site is styled with **Bootstrap**, **css3** and **Google Fonts**. The data was being originally called from the front-end using **Javascript** and **JQuery** code. Mid-way through the project the FBI API changed not only creating a unic API key for each user (provided at request) but also restructuring the data provided, including more and better parameters for the searchs. This changes also included the use of CORS, (Cross-Origin Resource Sharing) that avoided the class from the front end. This made necessary the creation of a specific back end (restful-wrapper API) to meet the new requirements. The restful-API part of the project can be viewed [HERE](https:#).
+This website uses **Java-Script** and **jQuery** to route viewers through the site. The site is styled with **Bootstrap**, **css3** and **Google Fonts**. The data was being originally called from the front-end using **Javascript** and **JQuery** code. Mid-way through the project the FBI API changed not only creating a unic API key for each user (provided at request) but also restructuring the data provided, including more and better parameters for the searchs. This changes also included the use of CORS, (Cross-Origin Resource Sharing) that avoided the calls from the front end. This made necessary the creation of a specific back end (restful-wrapper API) to meet the new requirements. The restful-API part of the project can be viewed [HERE](https:#).
 
 ## Features
  
@@ -32,7 +32,7 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
 
 ### Some the tech used includes:
 - **HTML**, **CSS** and **Javascript**
-  - Base languages used to create website
+  - Base languages used to create website.
 - [Bootstrap](http://getbootstrap.com/)
     - We use **Bootstrap** to give the project a simple, responsive layout.
 - [JQuery](https://jquery.com)
@@ -63,7 +63,7 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
 - The information used to create this site was from a number of sources
     - The FBI API used to extract the data charted was obtained from: [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/api)
     
-### Website working Demo and Link to project:
+## Demo Gifs and Link to Project:
 
 [Link to project](https://mboladop.github.io/Interactive-project-stream2/)
 
