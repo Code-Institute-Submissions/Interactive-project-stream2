@@ -1,139 +1,28 @@
 body{
     font-family: monospace !important;
-}
-.bgimg {
- background-color: #273A4B;
- background-size: cover;
- background-attachment: fixed;
- width: 100%;
- height: 100%;
- z-index: 0000;
-}
-
-#searchbtn{
-    display: none;
-}
-#underThePieChartOffendersCount{
-    color: red;
-}
-
-#underThePieChartVictimsCount{
-    color: white;
-}
-.crimetype{
-    text-align: center;
-}
-.row{
-    padding-top: 100px;
-    padding-left: 0px;
-}
-
-@media (max-width:736px){
-.bgimg{
-     background-image: none;
-     background-color: #273A4B;
- }
- 
-}
-
-#composite-chart{
-    background-color: lightgrey;
-    background: rgb(204, 204, 204); 
-    background: rgba(204, 204, 204, 0.5);
-    padding: 20px;
-    
-    
-    
-}
-.form{
-    background-color: lightgrey;
-    background: rgb(204, 204, 204); 
-    background: rgba(204, 204, 204, 0.5);
-    width: 300px;
-    color: white;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    
-}
-
-.pieFontColor{
-    color: black;
-}
-
-#containerComposite{
-    padding-left: 20px;
-    padding-top: 0px;
-}
-
-@media (min-width:736px) {
- .results {
-    margin-left: 20px;
-    overflow-y: scroll !important;
-    max-height: 210px !important;
-    
- }
- 
- .form {
-      margin-left: 20px;
- } 
- 
-}
-
-.bigScores {
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    padding-right: 20px;
-}
-
-.dc-chart .pie-slice {
-    fill: black;
-}
-
-h2{
-    text-align: center;
-}
-
-button {
-    text-align: center;
-}
-
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0px;
+    background-color: #273A4B;
+     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    height: 50px;
-    background-color: lightgrey;
-    color: white;
-    text-align: center;
-    background: rgb(204, 204, 204); 
-    background: rgba(204, 204, 204, 0.5);
+    height: 100%;
+    z-index: 0000;
 }
 
-.display_none {
+.row{
+    padding-top: 30px;
+}
+h1{
+    letter-spacing: 7px;
+    color: white;
+}
+h2{
+    text-align: left !important;
+    letter-spacing: 7px;
+    color: white; 
+}
+display_none {
     display: none;
 }
-
-.results {
-    background-color: lightgrey;
-    background: rgb(204, 204, 204); 
-    background: rgba(204, 204, 204, 0.5);
-    width: 300px;
-    color: white;
-    padding: 10px 15px 10px 15px;
-    overflow-y: scroll !important;
-    max-height: 210px !important;
-    
-}
-
-#containerComposite{
-    overflow-x: scroll !important;
-    max-width: 300px !important;
-    padding-left: 0px;
-    padding-top: 20px;
-}
-
 
 
 header{
@@ -148,3 +37,121 @@ header{
     text-align: left;
    
 }
+
+.crimetype{
+    text-align: center;
+    padding: 15px;
+}
+button {
+    text-align: center;
+}
+
+/*------------------------------------PIE CHART----------------------------*/
+
+#containerPiechart{
+    margin-top: 20px;
+    position: relative;
+    left: 8%;
+}
+#underThePieChartOffendersCount{
+    color: red;
+}
+#underThePieChartVictimsCount{
+    color: white;
+}
+.pieFontColor{
+    color: black;
+}
+.dc-chart .pie-slice {
+    fill: black;
+}
+/*------------------------------------FORM----------------------------*/
+.container.form.one{
+    margin-left: 20px;
+    background-color: lightgrey;
+    background: rgb(204, 204, 204); 
+    background: rgba(204, 204, 204, 0.5);
+    width: 330px;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 30%;
+}
+.form.one{
+    display: none;
+    color:white;
+}
+
+/*------------------------------------COMPOSITE CHART----------------------------*/
+
+#containerComposite{
+    padding-left: 20px;
+    left: 65%;
+    background-color: lightgrey;
+    background: rgb(204, 204, 204); 
+    background: rgba(204, 204, 204, 0.5);
+    overflow-x: scroll;
+    width: 330px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+#containerResults{
+    margin-bottom: 20px;
+} 
+/*------------------------------------DATA----------------------------*/
+
+.results {
+    background-color: lightgrey;
+    background: rgb(204, 204, 204); 
+    background: rgba(204, 204, 204, 0.5);
+    width: 330px;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    overflow-y: scroll !important;
+    max-height: 200px !important;
+    margin-left: 20px;
+}
+#containerResults{
+    display: none;
+}
+/*------------------------------------BIG SCORES----------------------------*/
+
+.bigScores {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-right: 20px;
+}
+
+/*------------------------------------SCALING----------------------------*/
+@media (max-width: 1200px){
+
+#containerPiechart{
+    left: 5%;
+}
+.secondrow{
+    width: 80%;
+}
+}
+
+@media (max-width: 425px){
+    .container.form.one{
+        position: relative;
+        left: 0%;
+    }
+    #containerComposite{ 
+        width: 330px;   
+        left: 0%;
+    }
+    #containerPiechart{
+        width: 330px;    
+        left: 0%;
+    }
+    .bigScores {
+        margin-top: 20px;
+    }
+    }

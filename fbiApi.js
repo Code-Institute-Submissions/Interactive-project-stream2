@@ -14,8 +14,8 @@ function makeGraph(countChartData) {
     let countChart = dc.pieChart("#pie-chart-count");
 
     countChart
-        .height(300)
-        .radius(150)
+        .height(250)
+        .radius(125)
         .dimension(nameDim)
         .group(totalCount)
         .colors(d3.scale.ordinal().domain(["Victims", "Offenders"]).range(["white", "red"]))
@@ -148,9 +148,11 @@ function afterhours() {
     
       //  { name: 'Offenders', value: offenders, year:offenders },
         
-       
-    document.getElementById("containerComposite").classList.remove("display_none");
-    document.getElementById("resultsid").classList.remove("display_none");
+    document.getElementById('containerComposite').style.left = "5%";
+    document.getElementById('general_form').style.left = "0%";   
+    document.getElementById("containerComposite").style.display = "block";
+    document.getElementById("containerResults").style.display = "block";
+    document.getElementById("containerPiechart").classList.remove("display_none");
     document.getElementById("underThePieChartOffendersCount").innerHTML = "<p>"+offenders+"</p>";
     document.getElementById("underThePieChartVictimsCount").innerHTML = victims;
    // $( "#totalCountVictims" ).clone().appendTo( "#underThePieChartVictimsCount" );
@@ -180,8 +182,8 @@ victimrequest.onload = function() {
 
 
 function startParty(crime, crimeTitle) {
-    $("#searchbtn").css("display", "block");
-    $('#titleCrime').html(crimeTitle)
+    $(".form.one").css("display", "block");
+    $('#titleCrime').html(crimeTitle);
     haterequest.open("GET", "https://mboladop-fbi-restful-api.herokuapp.com/offenders/" + crime);
 
     victimrequest.open("GET", "https://mboladop-fbi-restful-api.herokuapp.com/victims/"+ crime);

@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.css" />
-    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"></script>
-    <script src="jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="fbiApi.js"></script>
-
+    <link rel="stylesheet" href="dwcdn/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dwcdn/css/bootstrap-theme.min.css">    
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <title>F.B.I Crime Data Explorer</title>
 </head>
 
@@ -23,44 +17,51 @@
 
 
     <header><h1 style= 'margin-top: 0px;'>CRIME VS ETHNICITY CHARTING</h1></header><br><br>
-    <div class="container">
+    
         <div class="row crimetype">
-            <button class="btn btn-default btn-xs" onclick="startParty('rape', 'Rape');">Rape</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('violent-crime', 'Violent crimes');">Violent crimes</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('arson','Arson');">Arson</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('robbery','Robbery');">Robbery</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('homicide','Homicide');">Homicide</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('property-crime','Property crimes');">Property crimes</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('burglary','Burglary');">Burglary</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('larceny','Larceny');">Larceny</button>
-            <button class="btn btn-default btn-xs" onclick="startParty('aggravated-assault','Aggravated assaults');">Aggravated assaults</button>
+            <h2 id='first_step'>FIRST STEP: CHOOSE A FELONY</h2><br>
+            <button class="btn btn-default btn-xl" onclick="startParty('rape', 'Rape');">Rape</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('arson','Arson');">Arson</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('violent-crime', 'Violent crimes');">Violent crimes</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('robbery','Robbery');">Robbery</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('homicide','Homicide');">Homicide</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('property-crime','Property crimes');">Property crimes</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('burglary','Burglary');">Burglary</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('larceny','Larceny');">Larceny</button>
+            <button class="btn btn-default btn-xl" onclick="startParty('aggravated-assault','Aggravated assaults');">Aggravated assaults</button>
         </div>
         <div class="row">
-            <div class="col-sm-4 form one">
-                <h2>F.B.I <span id="titleCrime"></span> Data Search</h2>
-                <form id="crimeForm" class="">
-                    <strong>Year (1991-2016):</strong>
-                    <input style="color: black;" type="number" name="year" id="year_input" min="1991" max="2016"></input><br>
-                    <strong>Choose Ethnicity:</strong><br>
-                    <div id='crimediv'>
+            <div class="container">
+                <h2 id ='second_step' class ="form one">SECOND STEP: CHOOSE ETHNICITY AND YOU MAY SPECIFY A YEAR</h2><br>
+                <div id='general_form' class="container col-sm-4 form one">
+                    <h3>F.B.I <span id="titleCrime"></span> Data Search</h3>
+                    <form id="crimeForm" class="">
+                        <strong>Year (1991-2016):</strong>
+                        <input style="color: black;" type="number" name="year" id="year_input" min="1991" max="2016"></input><br>
+                        <strong>Choose Ethnicity:</strong><br>
+                        <div id='crimediv'>
+                        </div>
+                    </form>
+                    <button id='searchbtn' class=" btn btn-default btn-xs" onclick="afterhours();">Search</button>
+                </div>
+                <div id="containerComposite" class=" col-sm-4">
+                        <div id="composite-chart"></div>
                     </div>
-                </form>
-                <button id='searchbtn' class=" btn btn-default btn-xs" onclick="afterhours();">Search</button>
-            </div>
-            <div id="containerComposite" class="col-sm-8 display_none">
-            <div id="composite-chart"></div>
-            </div>   
-        </div>   
-        <div class="row">
-            <div class="col-sm-4 two">
+                <div id="containerPiechart"class="col-sm-4 display_none">
                     <div id="pie-chart-count"></div>
-            </div>
-            <div class="col-sm-4 bigScores">    
+                </div>
+
+                
+            </div>   
+        </div> 
+
+        <div class="second row">
+            <div class="col-sm-6 bigScores">    
                 <div id="underThePieChartOffendersCount"></div>
                 <div id="underThePieChartVictimsCount"></div>
             </div>
-            <div class="col-sm-4">
-                <div id="resultsid" class="results display_none">
+            <div class="col-sm-6">
+                <div id="containerResults" class="results display_none">
                     <p>Offenders:</p>
                     <div id="resultsOffenders"></div>
                     <p>Total Crimes:</p>
@@ -72,8 +73,13 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"></script>
+    <script type="text/javascript" src="dwcdn/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="dwcdn/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="fbiApi.js"></script>
 </body>
-
 </html>
