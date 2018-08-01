@@ -7,7 +7,10 @@ body{
     height: 100%;
     z-index: 0000;
 }
-
+.container{
+    padding-right: 0%;
+    padding-left: 0%;
+}
 .row{
     padding-top: 30px;
 }
@@ -28,7 +31,6 @@ h2{
 display_none {
     display: none;
 }
-
 
 header{
     position: relative;
@@ -91,8 +93,8 @@ button {
     background-color: rgb(73, 73, 73);
     background: rgb(117, 117, 117); 
     background: rgba(197, 197, 197, 0.192);
-    overflow-x: scroll;
-    width: 330px;
+    overflow-y: scroll !important;
+    max-width: 400px !important;
     padding-left: 0px;
     padding-top: 20px;
     margin-top: 20px;
@@ -149,7 +151,7 @@ button {
         left: 0%;
     }
     #containerComposite{ 
-        width: 330px;   
+        width: 600px;   
         left: 0%;
     }
     #containerPiechart{

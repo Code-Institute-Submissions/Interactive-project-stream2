@@ -14,8 +14,8 @@ function makeGraph(countChartData) {
     let countChart = dc.pieChart("#pie-chart-count");
 
     countChart
-        .height(250)
-        .radius(125)
+        .height(200)
+        .radius(100)
         .dimension(nameDim)
         .group(totalCount)
         .colors(d3.scale.ordinal().domain(["Victims", "Offenders"]).range(["white", "red"]))
@@ -61,7 +61,7 @@ function makeCompositeGraph(compositeGraph){
     compositeChart
         .width(width)
         .height(200)
-        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .margins({top: 10, right: 10, bottom: 30, left: 50})
         .dimension(yearDim)
         .x(d3.scale.linear().domain([1995,2016]))
         .yAxisLabel("Number of Crimes")
