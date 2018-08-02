@@ -149,10 +149,18 @@ function afterhours() {
       //  { name: 'Offenders', value: offenders, year:offenders },
         
     document.getElementById('containerComposite').style.left = "5%";
-    document.getElementById('general_form').style.left = "0%";   
     document.getElementById("containerComposite").style.display = "block";
+    
+    document.getElementById('general_form').style.left = "0%";   
+    
     document.getElementById("containerResults").style.display = "block";
-    document.getElementById("containerPiechart").classList.remove("display_none");
+
+    document.getElementById("containerPiechart").style.display = "block";
+
+    document.getElementById("big_scores").style.display = "block";
+
+    document.getElementById("reset_btn").style.display = "block";
+
     document.getElementById("underThePieChartOffendersCount").innerHTML = "<p>"+offenders+"</p>";
     document.getElementById("underThePieChartVictimsCount").innerHTML = victims;
    // $( "#totalCountVictims" ).clone().appendTo( "#underThePieChartVictimsCount" );
@@ -163,14 +171,15 @@ function afterhours() {
 }
 
 haterequest.onload = function() {
-
+    
         //console.log('newData', this.responseText)
         const parsedData = JSON.parse(this.responseText)
         $('#crimediv').html('')
-        for (let i = 0; i <= parsedData.keys.length - 1; i++) {
-            $('#crimediv').append('<input type="radio" name="ethnicity" id="ethinicity_input" value="'+parsedData.keys[i]+'"> '+parsedData.keys[i]+'</input><br>');
+        if (parsedData.keys){
+            for (let i = 0; i <= parsedData.keys.length - 1; i++) {
+                $('#crimediv').append('<input type="radio" name="ethnicity" id="ethinicity_input" value="'+parsedData.keys[i]+'"> '+parsedData.keys[i]+'</input><br>');
+            }
         }
-
     dataResponseOffenderObj.textForResponse = this.responseText
 }
 
@@ -192,4 +201,21 @@ function startParty(crime, crimeTitle) {
     victimrequest.send();
 
  
+}
+
+function reset(){
+    startParty('crime', 'Go back to the First step');
+
+   
+    document.getElementById("containerComposite").style.display = "none";
+    
+    document.getElementById('general_form').style.left = "30%";   
+    
+    document.getElementById("containerResults").style.display = "none";
+
+    document.getElementById("containerPiechart").style.display = "none";
+
+    document.getElementById("big_scores").style.display = "none";
+
+   
 }

@@ -42,11 +42,18 @@ header{
     text-align: center;
     padding: 15px;
 }
+
 button {
     text-align: center;
     color: #32576C !important;
-    
 }
+#reset_btn{
+    display: none;
+}
+.reset_btn_container{
+    padding-bottom: 10%;
+}
+
 
 /*------------------------------------PIE CHART----------------------------*/
 
@@ -144,11 +151,14 @@ button {
     #second_step{
         padding-left: 10%;
     }
+    .reset_btn_container{
+        padding-left: 40%;
+    }
 }
 @media (max-width: 425px){
     .container.form.one{
-        position: relative;
-        left: 0%;
+        position: relative !important;
+        left: 0% !important;
     }
     #containerComposite{ 
         width: 600px;   
