@@ -7,6 +7,14 @@ body{
     height: 100%;
     z-index: 0000;
 }
+.container.row.col-sm-12{
+    position: relative;
+    left: 40%;
+}
+#fbi_api{
+    color: rgb(13, 116, 175) !important;
+
+}
 .container{
     padding-right: 0%;
     padding-left: 0%;
@@ -152,6 +160,9 @@ button {
         padding-left: 10%;
     }
     .reset_btn_container{
+        padding-left: 40%;
+    }
+    #fbi_api_container{
         padding-left: 40%;
     }
 }
