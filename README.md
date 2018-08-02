@@ -53,8 +53,8 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
   - macbook 13" and 15"
   - samsung galaxy
 
-  To test it in different devices i started using the github xxxx, when I fixed all the versions for the different tablets and mobile screens I opened the portfolio from my iphone and realised the display was not looking as it should.
-  To fix this I createD a specific an new mobile version. For this purpose i downloaded xcode simulator and i served the website via [npm package serve](https://www.npmjs.com/package/serve) to be able to access it instantly and remotely through my own phone.
+  To test it in different devices i started using the console toggle device toolbar, when I fixed all the versions for the different tablets and mobile screens I opened the portfolio from my iphone and realised the display was not looking as it should.
+  To fix this I created a specific and new mobile version. For this purpose i downloaded xcode simulator and served the website via [npm package serve](https://www.npmjs.com/package/serve) to be able to access it instantly and remotely through my own phone.
 
 
 ## Credits
@@ -72,4 +72,4 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
 [Link to project](https://mboladop.github.io/Interactive-project-stream2/)
 
 
-![mobile Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2mobile.gif "mobile Demo")
+![Responsive Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2responsive.gif "Responsive Demo")
