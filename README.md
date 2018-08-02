@@ -2,8 +2,6 @@
 
 ![Desktop Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2.gif "Desktop Demo")
 
-![mobile Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2mobile.gif "mobile Demo")
-
 
 FBI API and data manipulation Project with RESTful/wrapper APIs. Used with the FBI Crime Data Explorer API. 
 
@@ -72,3 +70,6 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
 ## Project Live:
 
 [Link to project](https://mboladop.github.io/Interactive-project-stream2/)
+
+
+![mobile Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2mobile.gif "mobile Demo")
