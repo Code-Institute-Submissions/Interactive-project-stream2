@@ -2,8 +2,8 @@
 
 ![Desktop Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2.gif "Desktop Demo")
 
-![mobile1 Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2mobile1.gif "mobile1 Demo")
-![mobile2 Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2mobile2.gif "mobile2 Demo")
+![mobile Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2mobile.gif "mobile Demo")
+
 
 FBI API and data manipulation Project with RESTful/wrapper APIs. Used with the FBI Crime Data Explorer API. 
 
