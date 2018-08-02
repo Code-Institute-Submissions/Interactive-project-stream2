@@ -24,6 +24,35 @@ function makeGraph(countChartData) {
     dc.renderAll();
 }
 
+function makeBarGraph(barGraphData){    
+    
+    let ndx = crossfilter(barGraphData);
+
+    let nameDim = ndx.dimension(dc.pluck('name'));
+    let totalCount = nameDim.group().reduceSum(dc.pluck('count'));
+    
+    let bar = dc.barChart("#bar-chart");
+console.log('nameDim', nameDim, barGraphData);
+
+    bar
+        .width(290)
+        .height(250)
+        .margins({top:0, right:0, bottom: 50, left: 70})
+        .dimension(nameDim)
+        .group(totalCount)
+        .colorAccessor(function(d){
+            return d.key;
+        })
+        .colors(d3.scale.ordinal().domain(["Victims", "Offenders"]).range(["white", "red"]))
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .yAxis().ticks(4);
+        
+        
+
+    dc.renderAll();
+}
+
 function makeCompositeGraph(compositeGraph){
     
     let ndx = crossfilter(compositeGraph);
@@ -58,12 +87,13 @@ function makeCompositeGraph(compositeGraph){
     
     let compositeChart = dc.compositeChart("#composite-chart")
     var width = document.getElementById('containerComposite').offsetWidth;
+    
     compositeChart
         .width(width)
         .height(200)
-        .margins({top: 10, right: 10, bottom: 30, left: 50})
+        .margins({top: 10, right: 15, bottom: 30, left: 60})
         .dimension(yearDim)
-        .x(d3.scale.linear().domain([1995,2016]))
+        .x(d3.scale.linear().domain([1998,2016]))
         .yAxisLabel("Number of Crimes")
         .xAxisLabel("Year")
         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
@@ -121,26 +151,26 @@ function afterhours() {
    
     var compositeObj = [];
     let ethnicityInput = document.getElementById("crimeForm")['ethnicity'].value
-    
+
     let parsedOffenderObj = JSON.parse(dataResponseOffenderObj.textForResponse);
     for (var i = 0; i <= parsedOffenderObj.data.length -1; i++) {
         let year = parsedOffenderObj.data[i].data_year;
         let race = parsedOffenderObj.data[i].key;
         let value =parsedOffenderObj.data[i].value;
         
-        if (ethnicityInput == race){
+        if (ethnicityInput == race && i%2==0){
             compositeObj.push({ name: 'Offenders', value: value, year: year });
         }
         
     }
-    
+
     let parsedVictimObj = JSON.parse(dataResponseVictimObj.textForResponse);
     for (var i = 0; i <= parsedVictimObj.data.length -1; i++) {
         let year = parsedVictimObj.data[i].data_year;
         let race = parsedVictimObj.data[i].key;
         let value =parsedVictimObj.data[i].value;
         
-        if (ethnicityInput == race){
+        if (ethnicityInput == race && i%2==0){
             compositeObj.push({ name: 'Victims', value: value, year: year });
         }
         
@@ -157,6 +187,8 @@ function afterhours() {
 
     document.getElementById("containerPiechart").style.display = "block";
 
+    document.getElementById("bar_chart_container").style.display = "block";
+
     document.getElementById("big_scores").style.display = "block";
 
     document.getElementById("reset_btn").style.display = "block";
@@ -168,6 +200,7 @@ function afterhours() {
 
     makeGraph(formatObj);
     makeCompositeGraph(compositeObj);
+    makeBarGraph(formatObj);
 }
 
 haterequest.onload = function() {
@@ -214,6 +247,8 @@ function reset(){
     document.getElementById("containerResults").style.display = "none";
 
     document.getElementById("containerPiechart").style.display = "none";
+
+    document.getElementById("bar_chart_container").style.display = "none";
 
     document.getElementById("big_scores").style.display = "none";
 

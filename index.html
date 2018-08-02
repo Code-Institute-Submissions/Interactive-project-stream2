@@ -13,13 +13,13 @@
     <title>F.B.I Crime Data Explorer</title>
 </head>
 
-<body class="bgimg">
-    <header><h1 style= 'margin-top: 0px;'>CRIME VS ETHNICITY CHARTING</h1></header><br><br>
+<body>
+    <header><h1>CRIME VS ETHNICITY CHARTING</h1></header><br><br>
     
     <div class="container fbi_api_container">
         <div class="row">
             <div class="col-sm-2 col-sm-offset-5">
-                <button id='fbi_api' class="btn btn-default btn-xl"><a href='https://crime-data-explorer.fr.cloud.gov/' target='_blank'>FBI API</a></button>
+                <button id='fbi_api' class="btn btn-default btn-xl"><a href='https://crime-data-explorer.fr.cloud.gov/proxy/swagger-ui.html' target='_blank'>FBI API</a></button>
             </div>
         </div>
     </div><br><br>
@@ -61,31 +61,36 @@
             </div>   
         </div> 
 
-        <div class="second row">
-            <div id='big_scores'class="col-sm-6 bigScores">    
-                <div id="underThePieChartOffendersCount"></div>
-                <div id="underThePieChartVictimsCount"></div>
-            </div>
-            <div class="col-sm-6">
-                <div id="containerResults" class="results display_none">
-                    <p>Offenders:</p>
-                    <div id="resultsOffenders"></div>
-                    <p>Total Crimes:</p>
-                    <div id="totalCountOffenders"></div>
-                    <p>Victims:</p>
-                    <div id="resultsVictims"></div>
-                    <p>Total Crimes:</p>
-                    <div id="totalCountVictims"></div>
+        <div class="row">
+            <div class="container">
+                <div id="bar_chart_container" class="col-sm-4">
+                    <div id="bar-chart"></div>
+                </div>
+                <div id='big_scores'class="col-sm-4 bigScores">    
+                    <div id="underThePieChartOffendersCount"></div>
+                    <div id="underThePieChartVictimsCount"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="containerResults" class="results">
+                        <p>Offenders:</p>
+                        <div id="resultsOffenders"></div>
+                        <p>Total Crimes:</p>
+                        <div id="totalCountOffenders"></div>
+                        <p>Victims:</p>
+                        <div id="resultsVictims"></div>
+                        <p>Total Crimes:</p>
+                        <div id="totalCountVictims"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    <div class="container reset_btn_container">
-        <div class="row">
-            <div class="col-sm-2 col-sm-offset-5">
-                <button id="reset_btn" class="btn btn-default btn-xl" onclick="reset();">RESET</button>
+        <div class="container reset_btn_container">
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-5">
+                    <button id="reset_btn" class="btn btn-default btn-xl" onclick="reset();">RESET</button>
+                </div>
             </div>
         </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>

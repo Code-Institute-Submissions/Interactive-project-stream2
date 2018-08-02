@@ -22,6 +22,9 @@ body{
 .row{
     padding-top: 30px;
 }
+.second.row{
+    margin-left: 11.5%;
+}
 h1{
     letter-spacing: 7px;
     color: #32576C;
@@ -36,9 +39,7 @@ h2{
     letter-spacing: 7px;
     color: #6F7779; 
 }
-display_none {
-    display: none;
-}
+
 
 header{
     position: relative;
@@ -55,13 +56,13 @@ button {
     text-align: center;
     color: #32576C !important;
 }
-#reset_btn{
-    display: none;
-}
+
 .reset_btn_container{
     padding-bottom: 10%;
 }
-
+#reset_btn{
+    display: none;
+}
 
 /*------------------------------------PIE CHART----------------------------*/
 
@@ -103,22 +104,17 @@ button {
 
 #containerComposite{
     height: inherit;
-    padding-left: 20px;
+    padding-right: 15px;
+    padding-left: 5px;
     left: 65%;
-    background-color: rgb(73, 73, 73);
-    background: rgb(117, 117, 117); 
-    background: rgba(197, 197, 197, 0.192);
-    overflow-y: scroll !important;
-    max-width: 400px !important;
-    padding-left: 0px;
+    
+    /* overflow-y: scroll !important; */
+    max-width: 400px;
     padding-top: 20px;
     margin-top: 20px;
     display: none;
 }
 
-#containerResults{
-    margin-bottom: 20px;
-} 
 /*------------------------------------DATA----------------------------*/
 
 .results {
@@ -153,6 +149,7 @@ button {
 }
 .secondrow{
     width: 80%;
+    margin-right: 20px;
 }
 }
 @media (max-width: 770px){
@@ -162,9 +159,6 @@ button {
     .reset_btn_container{
         padding-left: 40%;
     }
-    #fbi_api_container{
-        padding-left: 40%;
-    }
 }
 @media (max-width: 425px){
     .container.form.one{
@@ -172,7 +166,7 @@ button {
         left: 0% !important;
     }
     #containerComposite{ 
-        width: 600px;   
+        width: 330px !important;   
         left: 0%;
     }
     #containerPiechart{

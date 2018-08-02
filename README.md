@@ -63,12 +63,11 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
 
 ### Media
 - The animated Gifs of the different projects from the [Giphy Capture App](https://giphy.com/apps/giphycapture)
-- FBI API [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/)
 
 
 ### Information
 - The information used to create this site was from a number of sources
-    - The FBI API used to extract the data charted was obtained from: [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/)
+    - The FBI API used to extract the data charted was obtained from: [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/proxy/swagger-ui.html)
     
 ## Project Live:
 
