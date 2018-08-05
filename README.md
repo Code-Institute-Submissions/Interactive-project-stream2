@@ -1,11 +1,9 @@
 # DISCLAIMER: This Project was created for educational purposes ONLY.
-
-![Desktop Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2.gif "Desktop Demo")
-
-
 FBI API and data manipulation Project with RESTful/wrapper APIs. Used with the FBI Crime Data Explorer API. 
 
 # Crime Data Explorer FBI Website
+
+![Desktop Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2.gif "Desktop Demo")
  
 ## Overview
  
