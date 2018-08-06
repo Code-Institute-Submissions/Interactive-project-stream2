@@ -93,8 +93,8 @@ To fix this I created a specific and new mobile version. For this purpose i down
 ### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command.
 2. After you've done that you'll need to make sure that you have **npm** installed. Link [npm package serve](https://www.npmjs.com/package/serve)
-6. The project will now run locally.
-7. Make changes to the code and if you think it belongs in here then just submit a pull request.
+3. The project will now run locally.
+4. Make changes to the code and if you think it belongs in here then just submit a pull request.
 
 ## Credits
 
