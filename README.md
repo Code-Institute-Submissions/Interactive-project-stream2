@@ -71,11 +71,11 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
     * Click on the “reset” button once the data of a search is loaded.
     * Verify the search goes back to the first step, (choosing a crime).
 
-## How the project looks and works on different browsers and screen sizes:
+### How the project looks and works on different browsers and screen sizes:
 
 ![Responsive Demo](https://raw.githubusercontent.com/mboladop/Interactive-project-stream2/master/stream2responsive.gif "Responsive Demo")
 
-## BUGS
+### BUGS
 To test it in different devices i started using the console toggle device toolbar, when I fixed all the versions for the different tablets and mobile screens I opened the website  from my Iphone and realised the display was not looking as it should.
 To fix this I created a specific and new mobile version. For this purpose i downloaded Xcode simulator and served the website via [npm package serve](https://www.npmjs.com/package/serve) to be able to access it instantly and remotely through my own phone.
 
