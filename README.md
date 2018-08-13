@@ -56,6 +56,7 @@ This website uses **Java-Script** and **jQuery** to route viewers through the si
   - Macbook 13" and 15"
   - Samsung Galaxy
 
+### Manual:
 -FBI API button:
     * Click on the “FBI API” button.
     * Check the website displays in a different tab.
@@ -102,7 +103,7 @@ To fix this I created a specific and new mobile version. For this purpose i down
 - The animated Gifs of the different projects from the [Giphy Capture App](https://giphy.com/apps/giphycapture)
 
 
-### Information
+### Sources
 - The information used to create this site was from a number of sources
     - The FBI API used to extract the data charted was obtained from: [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/proxy/swagger-ui.html)
     
